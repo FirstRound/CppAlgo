@@ -12,6 +12,23 @@ class ListGraph: public Graph<T> {
 private:
     AdjList<T> _adj_list;
 public:
+    void readGraphFromFile(std::string filename) {
+        std::ifstream file(filename);
+        std::string line1, line2;
+        if (file.is_open())
+        {
+            while (file >> line1 && file >> line2) {
+                _adj_list.addEdge(line1, line2);
+            }
+            file.close();
+        }
+    }
+    void dfs() {
+
+    }
+    void bfs() {
+
+    }
 };
 
 

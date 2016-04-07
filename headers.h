@@ -9,6 +9,8 @@
 #include <vector>
 #include <map>
 #include <algorithm>
+#include <fstream>
+#include <string>
 
 #include "Graph.h"
 #include "AdjList.h"
