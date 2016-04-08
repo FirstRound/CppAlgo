@@ -12,6 +12,7 @@ public:
     virtual void dfs();
     virtual void bfs();
     virtual void readGraphFromFile(std::string);
+    virtual void print();
     virtual ~Graph();
 };
 

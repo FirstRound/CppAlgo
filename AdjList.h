@@ -22,12 +22,15 @@ public:
                 _list[from].erase(tmp);
         }
     }
-    const std::vector<T>&  getAdjVector(T from) const {
+    const std::vector<T>&  getAdjToVertex(T from) const {
         if (_list.find(from) != _list.end()) {
             return _list[from];
         }
     }
 
+    const std::vector<T>& getVertices() const {
+        return _list.
+    }
 
 };
 

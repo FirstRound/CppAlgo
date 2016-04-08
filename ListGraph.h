@@ -29,6 +29,10 @@ public:
     void bfs() {
 
     }
+
+    void print() {
+
+    }
 };
 
 
