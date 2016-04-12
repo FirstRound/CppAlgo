@@ -5,15 +5,19 @@
 #ifndef CPPALGO_ADJLIST_H
 #define CPPALGO_ADJLIST_H
 
-#include "headers.h"
+#include <vector>
+#include <map>
+#include <set>
 
 template<class T>
 class AdjList {
 private:
     std::map<T, std::vector<T>> _list;
+    std::set<T> _vertices;
 public:
     void addEdge(T to, T from) {
         _list[from].push_back(to);
+        _vertices.insert(from);
     }
     void deleteEdge(T to, T from) {
         if (_list.find(from) != _list.end()) {
@@ -22,14 +26,15 @@ public:
                 _list[from].erase(tmp);
         }
     }
-    const std::vector<T>&  getAdjToVertex(T from) const {
+    std::vector<T>&  getAdjToVertex(T from) {
         if (_list.find(from) != _list.end()) {
             return _list[from];
         }
+
     }
 
-    const std::vector<T>& getVertices() const {
-        return _list.
+    std::set<T>& getVertices() {
+        return _vertices;
     }
 
 };

@@ -9,11 +9,10 @@
 template<class T>
 class Graph {
 public:
-    virtual void dfs();
-    virtual void bfs();
-    virtual void readGraphFromFile(std::string);
-    virtual void print();
-    virtual ~Graph();
+    virtual void dfs() = 0;
+    virtual void bfs() = 0;
+    virtual void readGraphFromFile(std::string) = 0;
+    virtual ~Graph(){}
 };
 
 
